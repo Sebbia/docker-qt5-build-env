@@ -8,3 +8,5 @@ WORKDIR /opt
 
 RUN export QT_FOLDER=$(echo ${QT_VERSION} | sed -r 's/^([0-9]+\.[0-9]+)(\.[0-9]+)?$/\1/') && \
     wget https://download.qt.io/archive/qt/${QT_FOLDER}/${QT_VERSION}/qt-opensource-linux-x64-${QT_VERSION}.run
+
+RUN apt-get install -y libdbus-1-3 libfreetype6 libfontconfig1
